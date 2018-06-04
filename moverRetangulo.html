@@ -1,0 +1,117 @@
+<html>
+<head>
+	<style rel="stylesheet">
+	
+	div#imagem {
+	font: bold;
+	color: white;
+	position : absolute;
+	top : 200px;
+	}
+	
+	div#imagem2 {
+	font: bold;
+	color: white;
+	position : absolute;
+	top : 290px;
+	}
+	
+	div#nome {
+	font-size: 30;
+	font: bold;
+	color: white;
+	position : absolute;
+	top : 225px;
+	left : 400px;
+	}
+	
+	body {
+	background-image: url("https://4.bp.blogspot.com/-iEg4NP4-B3c/U2FWAzA2rDI/AAAAAAAA12k/X-FOFo_1Nxk/s800/God+Of+War+4K+2014_HD.jpg");
+	background-repeat: no-repeat;
+	background-attachment: fixed; 
+	background-size: 100% 100%; 
+	}
+	
+	body { overflow-x: hidden; }
+	</style>
+</head>
+
+<body>
+
+	<div id="imagem">
+		<p>______________________________</p>
+	</div>
+	
+	<div id="nome">
+		<p>MATHEUS SANTOS ROCHA ALMEIDA</p>
+	</div>
+	
+	<div id="imagem2">
+		<p>______________________________</p>
+	</div>
+	
+	<script language="JavaScript">
+		var x = -250;
+		var PontoFinal = false;
+		
+		function anda() {
+			var imagem = document.getElementById("imagem");
+	
+			if(PontoFinal == false){
+				if (x < 1375){
+					x++;
+				}else{
+					PontoFinal = true;
+				}
+			}
+			else{
+				if(x <= 1375 && x >= -250){
+					x--;
+				}else{
+					PontoFinal = false;
+				}
+			}
+				imagem.style.left = x;
+				
+	
+		}
+		if(PontoFinal == false){
+			setInterval(function() { anda() }, 1);
+		}else{
+			setInterval(function() { anda() }, 4);
+		}
+		<!-- ---------------------------------------------------- -->
+		
+		var y = 1375;
+		var PontoFinalY = true;
+		
+		function anda2() {
+			var imagem2 = document.getElementById("imagem2");
+	
+			if(PontoFinalY == false){
+				if (y < 1375){
+					y++;
+				}else{
+					PontoFinalY = true;
+				}
+			}
+			else{
+				if(y <= 1375 && y >= -250){
+					y--;
+				}else{
+					PontoFinalY = false;
+				}
+			}
+				imagem2.style.left = y;
+				
+		}
+		if(PontoFinalY == true){
+			setInterval(function() { anda2() }, 1);
+		}else{
+			setInterval(function() { anda2() }, 4);
+		}
+	</script>
+
+
+</body>
+</html>
